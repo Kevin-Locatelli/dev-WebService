@@ -34,6 +34,7 @@ The API handles validation errors by returning a 422 status code with a "Validat
 
 - express
 - body-parser
+- sequelize
 
 ## Usage
 
