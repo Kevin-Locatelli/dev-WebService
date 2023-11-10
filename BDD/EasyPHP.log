@@ -978,3 +978,7 @@
 10/11 15:12:26 EasyPHP Apache CreateProcess "C:\Users\theke\Downloads\DEVWEB~1\BDD\Apache\bin\apache.exe"
 10/11 15:12:26 EasyPHP CreateProcess "C:\Users\theke\Downloads\DEVWEB~1\BDD\MySql\bin\mysqld.exe --defaults-file="C:\Users\theke\Downloads\DEVWEB~1\BDD\MySql\my.ini" --language=french"
 10/11 15:12:31 EasyPHP EasyPHP &Vérifier la version
+10/11 15:25:30 EasyPHP EasyPHP Arret des serveurs
+10/11 15:25:30 EasyPHP Apache stop event: ap23156_shutdown
+10/11 15:25:31 EasyPHP MySqlSutdown event = MySQLShutdown26052
+10/11 15:25:31 EasyPHP End EasyPHP...
