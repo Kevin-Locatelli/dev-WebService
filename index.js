@@ -3,14 +3,58 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 const movies = require('./films.json');
+const { Sequelize, DataTypes } = require('sequelize');
 
 app.use(bodyParser.json());
 
+// Connexion à la base de données
+const sequelize = new Sequelize('dev_webservice', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql',
+});
 
 // Récupération des films (listing)
 app.get('/movies', (req, res) => {
   res.json(movies);
 });
+
+const Movie = sequelize.define('Film', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  name: {
+    type: DataTypes.STRING(128),
+    allowNull: false,
+  },
+  description: {
+    type: DataTypes.STRING(2048),
+    allowNull: false,
+  },
+  date_creation: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  note: {
+    type: DataTypes.INTEGER,
+    validate: {
+      min: 0,
+      max: 5,
+    },
+  },
+});
+
+app.use(bodyParser.json());
+
+// Synchronisation du modèle avec la base de données
+sequelize.sync()
+  .then(() => {
+    console.log('Database and tables synced');
+  })
+  .catch((err) => {
+    console.error('Error syncing database:', err);
+  });
 
 // Récupération d'un film par ID
 app.get('/movies/:id', (req, res) => {
