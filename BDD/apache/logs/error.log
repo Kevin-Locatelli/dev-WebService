@@ -3268,3 +3268,11 @@ n'XêÅ Ÿ®%§                                                                    
 [Fri Nov 10 15:25:30.670670 2023] [mpm_winnt:notice] [pid 23156:tid 988] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Fri Nov 10 15:25:32.699740 2023] [mpm_winnt:notice] [pid 25900:tid 720] AH00364: Child: All worker threads have exited.
 [Fri Nov 10 15:25:32.743388 2023] [mpm_winnt:notice] [pid 23156:tid 988] AH00430: Parent: Child process exited successfully.
+[Fri Nov 10 15:32:25.947344 2023] [mpm_winnt:notice] [pid 29484:tid 916] AH00455: Apache/2.4.2 (Win32) PHP/5.4.6 configured -- resuming normal operations
+[Fri Nov 10 15:32:25.947344 2023] [mpm_winnt:notice] [pid 29484:tid 916] AH00456: Server built: Apr 20 2012 19:24:55
+[Fri Nov 10 15:32:25.947344 2023] [core:notice] [pid 29484:tid 916] AH00094: Command line: 'C:\\Users\\theke\\Downloads\\DEVWEB~1\\BDD\\Apache\\bin\\apache.exe -d C:/Users/theke/Downloads/Dev WebService/BDD/apache'
+[Fri Nov 10 15:32:25.955370 2023] [mpm_winnt:notice] [pid 29484:tid 916] AH00418: Parent: Created child process 28700
+[Fri Nov 10 15:32:26.710455 2023] [mpm_winnt:notice] [pid 28700:tid 4] AH00354: Child: Starting 64 worker threads.
+[Fri Nov 10 15:33:35.899806 2023] [mpm_winnt:notice] [pid 29484:tid 916] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Nov 10 15:33:37.919720 2023] [mpm_winnt:notice] [pid 28700:tid 4] AH00364: Child: All worker threads have exited.
+[Fri Nov 10 15:33:37.951339 2023] [mpm_winnt:notice] [pid 29484:tid 916] AH00430: Parent: Child process exited successfully.

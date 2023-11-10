@@ -990,3 +990,11 @@
 10/11 15:30:49 EasyPHP Apache stop event: ap24660_shutdown
 10/11 15:30:50 EasyPHP MySqlSutdown event = MySQLShutdown5288
 10/11 15:30:50 EasyPHP End EasyPHP...
+10/11 15:32:24 EasyPHP EasyPHP Servers starting
+10/11 15:32:25 EasyPHP Apache CreateProcess "C:\Users\theke\Downloads\DEVWEB~1\BDD\Apache\bin\apache.exe"
+10/11 15:32:25 EasyPHP CreateProcess "C:\Users\theke\Downloads\DEVWEB~1\BDD\MySql\bin\mysqld.exe --defaults-file="C:\Users\theke\Downloads\DEVWEB~1\BDD\MySql\my.ini" --language=english"
+10/11 15:32:30 EasyPHP EasyPHP &Check version
+10/11 15:33:35 EasyPHP EasyPHP Arret des serveurs
+10/11 15:33:35 EasyPHP Apache stop event: ap29484_shutdown
+10/11 15:33:36 EasyPHP MySqlSutdown event = MySQLShutdown27048
+10/11 15:33:36 EasyPHP End EasyPHP...
