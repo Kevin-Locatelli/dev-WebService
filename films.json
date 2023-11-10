@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "SuperQuent1 le 2",
+        "description": "BIEN",
+        "release_date": "2023-01-01",
+        "rating": 4
+    },
+    {
+        "id": 2,
+        "name": "Kevin le grand",
+        "description": "BIEN AUSSI",
+        "release_date": "2023-02-01",
+        "rating": 4
+    }
+]
