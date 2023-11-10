@@ -8,41 +8,14 @@ const { Sequelize, DataTypes } = require('sequelize');
 app.use(bodyParser.json());
 
 // Connexion à la base de données
-const sequelize = new Sequelize('dev_webservice', 'root', '', {
-  host: 'localhost',
+const sequelize = new Sequelize('sabergrou_webservice', 'sabergrou', 'WebS3rvice', {
+  host: 'mysql-sabergrou.alwaysdata.net',
   dialect: 'mysql',
 });
 
 // Récupération des films (listing)
 app.get('/movies', (req, res) => {
   res.json(movies);
-});
-
-const Movie = sequelize.define('Film', {
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  name: {
-    type: DataTypes.STRING(128),
-    allowNull: false,
-  },
-  description: {
-    type: DataTypes.STRING(2048),
-    allowNull: false,
-  },
-  date_creation: {
-    type: DataTypes.DATE,
-    allowNull: false,
-  },
-  note: {
-    type: DataTypes.INTEGER,
-    validate: {
-      min: 0,
-      max: 5,
-    },
-  },
 });
 
 app.use(bodyParser.json());
