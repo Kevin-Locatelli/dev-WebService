@@ -14,6 +14,22 @@ Returns a list of all movies.
 
 Returns a single movie by ID.
 
+### GET /movies?page=1&pageSize=10
+
+Returns movies on page one.
+
+### GET /movies/category/:category
+
+Returns movies by category.
+
+### GET /movies/namesearch/:name:
+
+Returns movies by description.
+
+### GET /movies/descsearch/:name:
+
+Returns movies by name.
+
 ### PUT /movies/:id
 
 Updates a movie by ID.
@@ -39,5 +55,5 @@ The API handles validation errors by returning a 422 status code with a "Validat
 ## Usage
 
 1. Clone the repository.
-2. Install dependencies with `npm install`.
-3. Start the server with `npm start`.
+2. Install dependencies with `npm i`.
+3. Start the server with `node .`.
