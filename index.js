@@ -42,13 +42,6 @@ Movie.init({
   tableName: 'movies' // specify the table name
 });
 
-/*
-// Récupération des films (listing)
-app.get('/movies', async (req, res) => {
-  let movies = await Movie.findAll();
-  res.json(movies);
-}); */
-
 // Synchronisation du modèle avec la base de données
 sequelize.sync()
   .then(() => {
@@ -114,7 +107,7 @@ app.use((err, req, res, next) => {
     res.status(422).json({ message: 'Validation error' });
   }
 });
-
+// Récuperation des films par catégories 
 app.get('/movies/category/:category', async (req, res) => {
   const category = req.params.category;
 
