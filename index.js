@@ -1,8 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+// index.js
+import express from 'express';
+import bodyParser from 'body-parser';
+import { Sequelize, DataTypes, Model } from 'sequelize';
+
 const app = express();
 const port = 3000;
-const { Sequelize, DataTypes, Model } = require('sequelize');
 
 app.use(bodyParser.json());
 
@@ -53,7 +55,6 @@ sequelize.sync()
 
 // Récupération d'un film par ID
 app.get('/movies/:id', async (req, res) => {
-
   let movies = await Movie.findAll();
 
   const movieId = parseInt(req.params.id);
@@ -68,7 +69,6 @@ app.get('/movies/:id', async (req, res) => {
 
 // Modification d'un film par ID
 app.put('/movies/:id', async (req, res) => {
-
   let movies = await Movie.findAll();
 
   const movieId = parseInt(req.params.id);
@@ -94,7 +94,6 @@ app.post('/movies', async (req, res) => {
 
 // Suppression d'un film par ID
 app.delete('/movies/:id', async (req, res) => {
-  
   let movies = await Movie.findAll();
   const movieId = parseInt(req.params.id);
   movies = movies.filter((m) => m.id !== movieId);
@@ -107,7 +106,8 @@ app.use((err, req, res, next) => {
     res.status(422).json({ message: 'Validation error' });
   }
 });
-// Récuperation des films par catégories 
+
+// Récuperation des films par catégories
 app.get('/movies/category/:category', async (req, res) => {
   const category = req.params.category;
 
@@ -131,7 +131,7 @@ app.get('/movies/category/:category', async (req, res) => {
 
 // Récupération des films par Nom
 app.get('/movies/namesearch/:name', async (req, res) => {
-  const nameQuery = req.params.name;  
+  const nameQuery = req.params.name;
 
   if (!nameQuery) {
     return res.status(400).json({ message: 'Name parameter is required for search' });
@@ -159,7 +159,7 @@ app.get('/movies/namesearch/:name', async (req, res) => {
 
 // Récupération des films par description
 app.get('/movies/descsearch/:description', async (req, res) => {
-  const descriptionQuery = req.params.description;  
+  const descriptionQuery = req.params.description;
 
   if (!descriptionQuery) {
     return res.status(400).json({ message: 'Description parameter is required for search' });
@@ -209,6 +209,8 @@ app.get('/movies', async (req, res) => {
   }
 });
 
-app.listen(port, () => {  
+app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+export default app; // Exporter app par défaut
